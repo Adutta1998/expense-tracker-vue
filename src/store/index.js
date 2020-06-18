@@ -28,7 +28,7 @@ export default new Vuex.Store({
     actions: {
         async fetch_income({ commit, state }) {
             state.loading = true
-            await fetch("http://localhost/expensetracker/fetch.php?type=income")
+            await fetch("http://localhost/expensetrackerbackend/fetch.php?type=income")
                 .then(raw => (raw).json())
                 .then(res => {
                     commit("fetch_income", res)
@@ -37,7 +37,7 @@ export default new Vuex.Store({
         },
         async fetch_expense({ commit, state }) {
             state.loading = true
-            await fetch("http://localhost/expensetracker/fetch.php?type=expense")
+            await fetch("http://localhost/expensetrackerbackend/fetch.php?type=expense")
                 .then(raw => (raw).json())
                 .then(res => {
                     state.loading = false
@@ -46,7 +46,7 @@ export default new Vuex.Store({
         },
         save({ commit, dispatch, state }, payload) {
             state.loading = true
-            fetch("http://localhost/expensetracker/insert.php", {
+            fetch("http://localhost/expensetrackerbackend/insert.php", {
                     method: "post",
                     body: getFormData(payload)
                 })

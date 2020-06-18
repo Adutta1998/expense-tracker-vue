@@ -19,7 +19,7 @@
 </template>
 
 <script>
-
+import md5 from 'md5'
 export default {
   name: 'App',
   data(){
@@ -30,7 +30,6 @@ export default {
   methods:{
     viewChanged(arg){
       this.notIsHome = arg
-      console.log(arg)
     }
   },
   mounted(){
@@ -39,3 +38,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.Income.curve > path.fill{
+  fill: rgba(76,175,80,.65)
+}
+.Expense.curve > path.fill{
+  fill: rgba(255,82,82,.65)
+}
+</style>

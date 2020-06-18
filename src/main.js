@@ -6,6 +6,7 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import TrendCharts from 'vue-trend-chart';
 
+
 Vue.use(TrendCharts)
 
 Vue.config.productionTip = false
