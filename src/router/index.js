@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Charts from '../views/Charts.vue'
 import Tables from '../views/Tables.vue'
+import Login from '../views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [{
         path: '/table',
         name: 'Tables',
         component: Tables
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
     }
 ]
 
