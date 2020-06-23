@@ -10,7 +10,8 @@
       </router-link>
       <v-toolbar-title>Expense Tracker</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn outlined v-if="loggedIn!=null" @click="logout">Logout<v-icon right>mdi-logout-variant</v-icon></v-btn>
+      <v-btn outlined v-if="loggedIn!=null" @click="logout">Logout
+        <v-icon right>mdi-logout-variant</v-icon></v-btn>
     </v-toolbar>
   </v-card>
 
