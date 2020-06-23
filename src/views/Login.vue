@@ -5,7 +5,7 @@
           <v-text-field label="Name" outlined hide-details="auto" class="mb-2" v-model="credentials.name"/>
           <v-text-field v-if="!isLogin" label="Email:" type="email" outlined hide-details="auto" class="mb-2" v-model="credentials.email"/>
           <v-text-field label="Password:" type="password" outlined hide-details="auto" class="mb-2" v-model="credentials.password"/>
-          <v-btn outlined color="primary" @click="auth">Submit</v-btn>
+          <v-btn outlined color="primary" @click="auth" :loading="isloading">Submit</v-btn>
           <v-btn class="mt-16" outlined color="primary" block @click="isLogin = !isLogin">
               <span v-if="isLogin">
                   Not a user? Sign-up
@@ -29,6 +29,11 @@ export default {
             email:""
         }
     }),
+    computed:{
+        isloading(){
+            return this.$store.state.loading
+        },
+    },
     methods:{
         auth(){
             if(this.isLogin){
